@@ -1,0 +1,71 @@
+- Thẻ (tag), thuộc tính (attribute) là gì 
++ Thẻ (tag): một phần của phần tử HTML, giúp trình duyệt chuyển đổi tài liệu HTML thành trang web
++ Thuộc tính (attribute):cung cấp thông tin về các phần tử, được chỉ định trong thẻ bắt đầu
+
+- div, span khác nhau như nào
++ div (thẻ block): sử dụng làm vùng chứa cho các phần tử HTML khác, hiển thị trên mỗi dùng riêng biệt. 
+Khi được sử dụng cùng CSS, <div> có thể được sử dụng để tạo kiểu cho các khối
++ span (thẻ inline): sử dụng để đánh dấu một phần của văn bản hoặc tài liệu, vẫn nằm chung một dòng với các thẻ khác. 
+Khi được sử dụng cùng CSS, <span> có thể được sử dụng để tạo kiểu cho các phần của văn bản
+
+- Th, td khác nhau như nào
++ th: tiêu đề bảng, thường được in đậm, căn giữa
++ td: dữ liệu bảng
+
+- ul và ol khác nhau như nào
++ ul: danh sách có thứ tự
++ ol: danh sách không có thứ tự 
+
+- Thuộc tính (attribute) id khác class như nào
++ id: chỉ được sử dụng bởi duy nhất một phần tử
++ class: một tên lớp có thể được sử dụng bởi nhiều phần tử HTML
+
+- Thẻ meta có tác dụng gì, đưa ra một vài cách sử dụng
++ Thẻ meta thường được dùng để chỉ định bộ ký tự, mô tả trang, từ khóa, tác giả của tài liệu, cài đặt chế độ xem
++ <meta charset="UTF-8"> : xác định bộ ký tự được sử dụng
++ <meta name="keywords" content="HTML, CSS, JavaScript">: xác định từ khóa cho công cụ tìm kiếm
++ <meta name="description" content="Free Web tutorials">: xác định mô tả về trang web
++ <meta http-equiv="refresh" content="30">: làm mới tài liệu sau 30 giây
+
+- Thẻ meta viewport có tác dụng gì
++ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+đặt chế độ xem cho trang web, cung cấp hướng dẫn cho trình duyệt về cách kiểm soát kích thước và tỷ lệ trang web tốt trên tất cả các thiết bị
++ width=device-width: đặt chiều rộng của trang theo chiều rộng màn hình của thiết bị (sẽ thay đổi tùy theo thiết bị).
++ initial-scale=1.0: đặt mức thu phóng ban đầu khi trang được trình duyệt tải lần đầu tiên.
+
+- Nếu thêm các thuộc tính defer, async vào thẻ script thì nó sẽ có khác biệt gì với thẻ script thông thường
++ script: quá trình chạy HTML bị chặn, tập lệnh được tìm và thực hiện ngay lập tức
+các lệnh HTML sẽ tiếp tục phân tích sau khi tập lệnh được thực thi
++ script async: tập lệnh được tìm nạp song song với phân tích HTML, thực thi ngay sau khi nó có sẵn
++ script defer: tập lệnh được tìm nạp song song với phân tích HTML, thực thi khi trang đã phân tích xong
+Nếu có nhiều tập lệnh thì thực thi theo thứ tự trong tài liệu 
+
+- Tại sao cần đặt CSS ở head, JS cuối cùng của thẻ </body>
++ đặt CSS ở đầu cho phép trang hiển thị dần dần, tránh bị chặn việc hiển thị đối với một số trình duyệt
++ đặt JS cuối cùng thẻ </body> để chặn việc phân tích cú pháp HTML trong khi đang được tải xuống và thực thi, cho phép HTML được phân tích và hiển thị cho người dùng trước tiên
+
+- Thuộc tính src và alt của thẻ img dùng cho mục đích gì
++ src: chỉ định đường dẫn URL đến ảnh
++ alt: văn bản thay thế cho hình ảnh nếu người dùng không thể xem được ảnh
+
+- Thẻ DOCTYPE để làm gì
++ khai báo kiểu của tài liệu HTML
++ cho phép trình duyệt hiển thị trang web ở chế độ tiêu chuẩn
+
+- Làm sao để gộp hàng với cột trong bảng
++ gộp hàng: dùng thuộc tính rowspan 
++ gộp cột: dùng thuộc tính colspan
+
+- Link và thẻ a khác nhau như thế nào
++ link: xác định mối quan hệ giữa HTML với các tài nguyên bên ngoài
++ a: tạo các link liên kết
+
+- Form có những thuộc tính nào, tác dụng của từng loại. Input type = input và type = button khác nhau như thế nào
++ action: xác định hành động được thực hiện khi biểu mẫu được gửi. Nếu thuộc tính bị bỏ qua, hành động được đặt thàn trang hiện tại
++ target: chỉ định nơi hiển thị phản hồi nhận được sau khi gửi biểu mẫu
++ method: chỉ định phương thức HTTP được sử dụng khi gửi form.
++ autocomplete: chỉ định nên bật hay tắt tính năng tự động hoàn thành
++ novalidate: thuộc tính boolean => dữ liệu không được xác thực khi gửi
+ 
++ type = input: nhập thông tin 
++ type = button: hiển thị một nút nhấn
