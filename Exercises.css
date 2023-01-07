@@ -1,0 +1,574 @@
+/* ex1 */
+.ex1 {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    background: linear-gradient(black, blue);
+    align-items: center;
+    justify-content: center;
+}
+.anh1 {
+    width: 480px;
+    height: 380px;
+}
+
+/* ex2 */
+div.reallyfast {
+    width: 250px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.ex21 {
+    width: 250px;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+div.broken {
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+}
+div.ex22 {
+    width: 250px;
+    height: 200px;
+    background-color: rgb(240, 235, 235);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: 2;
+    border-top: dashed rgb(205, 201, 201) ;
+    border-left: dashed rgb(205, 201, 201) ;
+    opacity: 0.5;
+}
+
+h3, p {
+    margin-left: 10px;
+}
+
+/* Ex3 */
+input.check-control{
+    display: none;
+}
+input.check-control + label.lab{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 55px;
+    border-radius: 60px;
+    background: linear-gradient(90deg, rgb(7, 7, 132), orange);
+    user-select: none;
+    /*  user-select: auto|none|text|all; 
+        auto    Mặc định. Có thể chọn văn bản nếu trình duyệt cho phép
+        none    Ngăn chọn văn bản
+        text    Người dùng có thể chọn văn bản
+        all     Lựa chọn văn bản được thực hiện bằng một cú nhấp chuột thay vì nhấp đúp*/
+}
+input.check-control + label.lab::before, input.check-control + label.lab::after{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 5px;
+    content: '';
+}
+input.check-control + label.lab::before{
+    background: white;
+    border-radius: 60px;
+}
+/* đây là nút circle nổi lên */
+input.check-control + label.lab::after{
+    width: 30px;
+    background: linear-gradient(90deg, orange,purple);
+    border-radius: 100px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+input.check-control:checked + label.lab::before{
+    background: white;
+}
+input.check-control:checked + label.lab::after{
+    margin-left: 50px;
+}
+
+/* ex4 */
+div.ex4 {
+    background: lightgray;
+    width: 300px;
+    height: 80px;
+}
+input.radio-control{
+    display: none;
+}
+label.ex4{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    margin-left: 4px;
+    top: 20px;
+    bottom: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 60px;
+    color: rgb(21, 21, 148);
+    user-select: none;
+}
+
+input.radio-control + label.ex4::before{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    content: '';
+    border-radius: 15px;
+    border: 4px solid rgb(21, 21, 148);
+    background-color: white;
+}
+
+input.radio-control + label#male::after {
+    position: absolute;
+    content: 'Male';
+    font-weight: bolder;
+    top: 15px;
+    left: 50px;
+}
+
+input.radio-control:checked + label.ex4{
+    background: rgb(21, 21, 148);
+    color: white;
+}
+input.radio-control:checked + label.ex4::before{
+    border-color: white;
+    background: rgb(21, 21, 148);
+}
+
+label#female {
+    margin-left: 30px;
+}
+
+input.radio-control + label#female::after {
+    position: absolute;
+    content: 'Female';
+    font-weight: bolder;
+    top: 15px;
+    left: 50px;
+}
+
+/* ex5 */
+div.ex5 {
+    position: relative;
+    width: 240px;
+    height: 200px;
+    background-color: rgb(26, 26, 56);
+    border: solid rgb(241, 239, 239);
+}
+
+div.left {
+    position: absolute;
+    float: left;
+    width: 120px;
+    height: 140px;
+    margin-top: 60px;
+    background-color: white;
+    border-top-right-radius: 50px;
+}
+
+div.right {
+    float: right;
+    width: 120px;
+    height: 140px;
+    margin-top: 60px;
+    background-color: white;
+    border-top-left-radius: 50px;
+}
+
+div.sub {
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    z-index: 3;
+}
+p.p1 {
+    display: inline-block;
+    font-size: 25px;
+    color: aqua;
+    margin-bottom: 0;
+}
+
+p.p2 {
+    display: inline-block;
+    color: lightgray;
+    margin-top: 0;
+}
+
+/* ex6 */
+div.ex6 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /* font-family: sans-serif; */
+}
+
+.wrapper .box {
+    max-width: 400px;
+    width: 100%;
+}
+
+.wrapper .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    background: white;
+    /* height: 60px; */
+    border-bottom: 2px solid black;
+}
+
+div.menu {
+    margin-left: 700px;
+}
+
+.wrapper .navbar .menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+div.box {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+div.searchbar {
+    position: relative;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#check:checked~.searchbar {
+    max-width: 380px;
+}
+
+.searchbar input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    outline: none;
+    border: 4px solid rgb(44, 44, 165);
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.searchbar input::placeholder {
+    color: rgb(44, 44, 165);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+.searchbar .icon {
+    position: absolute;
+    background: white;
+    right: -2px;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+
+    border-radius: 3px;
+}
+
+#check:checked~.searchbar .icon {
+    width: 60px;
+    border: 4px solid rgb(44, 44, 165);
+    border-radius: 0 5px 5px 0;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .wrapper .navbar {
+        padding: 0px;
+        flex-direction: column;
+        height: 200px;
+        justify-content: center;
+    }
+
+    .wrapper .navbar .menu ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .searchbar .icon {
+        display: block;
+        margin-right: -20px;
+    }
+}
+
+/* ex7 */
+.btn {
+    position: relative;
+    display: block;
+    width: 250px;
+    padding: 15px 45px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1) ;
+    /* cursor: pointer; */
+    user-select: none;
+}
+
+ .btn:before, .btn:after {
+    content: '';
+    position: absolute;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: white;
+    transition-delay: 0.5s;
+}
+
+.btn:hover:after {
+    background: rgb(209, 209, 209);
+    transition-delay: .3s;
+    padding-bottom: 2px;
+}
+
+.ex7:before, .ex7:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+.ex7:before {
+    right: 0;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* chuyển động từ trái sang */
+.ex7:after {
+    left: 0;
+}
+
+.ex7:hover:before, .ex7:hover:after {
+    width: 100%;
+} 
+
+/* ex8 */
+.ex8:before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* chuyển động từ tren xuong */
+.ex8:after {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: gray;
+}
+
+.ex8:hover:before {
+    left: 0;
+    width: 100%;
+}
+.ex8:hover:after {
+    top: 0;
+    height: 100%;
+} 
+
+/* ex9 */
+a {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+}
+
+.button {
+    position: relative;
+    background: rgb(113, 150, 113);
+    padding: 50px;
+    width: 250px;
+    text-align: center;
+}
+
+.button span {
+    display: inline-block;
+    min-width: 3px;
+    text-transform: uppercase;
+    transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+    opacity: 0;
+    transform: translate(0,-20px);
+}
+
+.button:before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 1;
+    transform: translate(0, 0px);/*thay đổi vị trí của hover me*/
+}
+
+.button:hover:before, .button:focus:before {
+    opacity: 0;
+    transform: translate(0,20px); /*đẩy hover me xuống dưới*/
+}
+
+.button:hover span, .button:focus span {
+    opacity: 1;
+    transform: translate(0,0px); /*thay đổi vị trí của thanks*/
+}
+
+.button:hover span:nth-child(1), .button:focus span:nth-child(1) {
+    transition-delay: 0.025s;
+}
+.button:hover span:nth-child(2), .button:focus span:nth-child(2) {
+    transition-delay: 0.075s;
+}
+.button:hover span:nth-child(3), .button:focus span:nth-child(3) {
+    transition-delay: 0.125s;
+}
+.button:hover span:nth-child(4), .button:focus span:nth-child(4) {
+    transition-delay: 0.175s;
+}
+.button:hover span:nth-child(5), .button:focus span:nth-child(5) {
+    transition-delay: 0.225s;
+}
+.button:hover span:nth-child(6), .button:focus span:nth-child(6) {
+    transition-delay: 0.275s;
+}
+
+/* ex10 */
+ /* div.ex10 {
+    display: block;
+    background: black;
+    width: 190px;
+    height: 50px;
+} */
+button.explore {
+    position: relative;
+    font-family: monospace;
+    letter-spacing: 2px;
+    background: black;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    z-index: 2;
+    transition: 0.01s 0.23s ease-out all;
+    overflow: hidden;
+}
+
+ button.explore:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    background: rgb(39, 35, 35);
+    z-index: -1;
+    transition: 0.3s ease-in all;
+}
+
+button.explore:after {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 5%;
+    height: 90%;
+    width: 5%;
+    background: white;
+    z-index: -1;
+    transition: 0.4s 0.02s ease-in all;
+}
+
+button.explore:hover {
+    color: transparent;
+}
+
+button.explore:hover:before {
+    left: 100%;
+    width: 25%;
+}
+
+button.explore:hover:after {
+    left: 100%;
+    width: 70%;
+}
+
+button.explore:hover .ex-right.after:after {
+    left: -80px;
+    color: white;
+    transition: 0.2 0.2 ease all;
+}
+
+button.explore:hover .ex-right.after:before {
+    left: -104px;
+    top: 15px;
+    opacity: 0.4;
+    color: white;
+}
+
+.ex-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ex-right:after {
+    font-family:'Times New Roman', Times, serif;
+    content: "→";
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    transform: translate(0, -50%);
+}
+
+.ex-right.after:after {
+    left: -250px;
+    color: rgb(39, 35, 35);;
+    transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
+}
+
+.ex-right.after:before {
+    content: "Explore";
+    position: absolute;
+    left: -230px;
+    top: 14px;
+    opacity: 0;
+    transition: 0.2s ease-in all;
+}  
